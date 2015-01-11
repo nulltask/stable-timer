@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/nulltask/stable-timer",
   "dependencies": {
-    "pseudo-function": "0.0.4"
+    "stable-interval": "0.0.1",
+    "stable-timeout": "0.0.1"
   },
   "devDependencies": {
     "browserify": "^8.1.0",
