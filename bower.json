@@ -1,0 +1,21 @@
+{
+  "name": "stable-timer",
+  "main": "build/stable-timer.js",
+  "version": "0.0.0",
+  "authors": [
+    "nulltask <nulltask@gmail.com>"
+  ],
+  "description": "A timer that is stable in any situation. e.g. tabs in background, the invisible state page.",
+  "keywords": [
+    "timer",
+    "stable",
+    "worker"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nulltask/stable-timer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test"
+  ]
+}

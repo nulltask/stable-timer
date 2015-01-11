@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>stable-timer</title>
+  <script src="build/stable-timer.js"></script>
+</head>
+<body>
+  <script>
+    var timer1 = StableTimer.setTimeout(function() {
+      console.log('timer 1', new Date());
+    }, 500);
+
+    console.log('timer 1 is started. timer id = ', timer1);
+
+    var timer2 = StableTimer.setInterval(function() {
+      console.log('timer 2', new Date());
+    }, 500);
+
+    console.log('timer 2 is started. timer id = ', timer2);
+
+    var timer3 = StableTimer.setTimeout(function() {
+      // never called.
+      console.log('timer 3', new Date());
+    }, 15000);
+
+    console.log('timer 3 is started. timer id = ', timer3);
+
+    var timer4 = StableTimer.setInterval(function() {
+      // never called.
+      console.log('timer 4', new Date());
+    }, 15000);
+
+    console.log('timer 4 is started. timer id = ', timer4);
+
+    StableTimer.setTimeout(function() {
+      console.log('clear all timer');
+      StableTimer.clearTimeout(timer1);
+      StableTimer.clearInterval(timer2);
+      StableTimer.clearTimeout(timer3);
+      StableTimer.clearInterval(timer4);
+      console.log('all timers were cleared.');
+    }, 10000);
+  </script>
+</body>
+</html>

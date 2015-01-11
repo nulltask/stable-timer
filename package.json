@@ -1,0 +1,37 @@
+{
+  "name": "stable-timer",
+  "version": "0.0.0",
+  "description": "A timer that is stable in any situation. e.g. tabs in background, the invisible state page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "zuul -- test",
+    "build-standalone": "browserify index.js --standalone StableTimer | tee build/stable-timer.js | minify --language javascript > build/stable-timer.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nulltask/stable-timer.git"
+  },
+  "keywords": [
+    "browserify",
+    "timer",
+    "background",
+    "worker"
+  ],
+  "author": "nulltask <nulltask@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nulltask/stable-timer/issues"
+  },
+  "homepage": "https://github.com/nulltask/stable-timer",
+  "dependencies": {
+    "pseudo-function": "0.0.4"
+  },
+  "devDependencies": {
+    "browserify": "^8.1.0",
+    "minify": "git://github.com/ianstormtaylor/minify#0.2.0"
+  },
+  "files": [
+    "index.js",
+    "Readme.md"
+  ]
+}
