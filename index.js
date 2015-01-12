@@ -16,7 +16,8 @@ var id = 0;
  * Timer references.
  */
 
-var timers = {};
+var timeouts = {};
+var intervals = {};
 
 /**
  * @param {Function} fn
@@ -28,7 +29,7 @@ var timers = {};
 exports.setInterval = function(fn, ms) {
   var timerId = id++;
   var timer = new StableInterval();
-  timers[timerId] = timer;
+  intervals[timerId] = timer;
   timer.set(fn, ms || 0);
   return timerId;
 };
@@ -40,10 +41,10 @@ exports.setInterval = function(fn, ms) {
  */
 
 exports.clearInterval = function(id) {
-  var timer = timers[id];
+  var timer = intervals[id];
   if (!timer) return;
   timer.clear();
-  return delete timers[id];
+  return delete intervals[id];
 };
 
 /**
@@ -56,7 +57,7 @@ exports.clearInterval = function(id) {
 exports.setTimeout = function(fn, ms) {
   var timerId = id++;
   var timer = new StableTimeout();
-  timers[timerId] = timer;
+  timeouts[timerId] = timer;
   timer.set(fn, ms || 0);
   return timerId;
 };
@@ -68,8 +69,8 @@ exports.setTimeout = function(fn, ms) {
  */
 
 exports.clearTimeout = function(id) {
-  var timer = timers[id];
+  var timer = timeouts[id];
   if (!timer) return;
   timer.clear();
-  return delete timers[id];
+  return delete timeouts[id];
 };
