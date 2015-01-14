@@ -1,6 +1,6 @@
 {
   "name": "stable-timer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A timer that is stable in any situation. e.g. tabs in background, the invisible state page.",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/nulltask/stable-timer",
   "dependencies": {
-    "stable-interval": "0.0.2",
-    "stable-timeout": "0.0.2"
+    "stable-interval": "0.0.3",
+    "stable-timeout": "0.0.3"
   },
   "devDependencies": {
     "browserify": "^8.1.0",
