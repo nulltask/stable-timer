@@ -4,8 +4,8 @@
   "description": "A timer that is stable in any situation. e.g. tabs in background, the invisible state page.",
   "version": "0.0.3",
   "dependencies": {
-    "nulltask/stable-interval": "0.0.3",
-    "nulltask/stable-timeout": "0.0.3"
+    "nulltask/stable-interval": "0.0.4",
+    "nulltask/stable-timeout": "0.0.4"
   },
   "scripts": [
     "index.js"

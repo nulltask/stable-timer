@@ -24,12 +24,12 @@
   },
   "homepage": "https://github.com/nulltask/stable-timer",
   "dependencies": {
-    "stable-interval": "0.0.3",
-    "stable-timeout": "0.0.3"
+    "stable-interval": "0.0.4",
+    "stable-timeout": "0.0.4"
   },
   "devDependencies": {
-    "browserify": "^8.1.0",
-    "minify": "git://github.com/ianstormtaylor/minify#0.2.0"
+    "browserify": "^9.0.8",
+    "minify": "git://github.com/ianstormtaylor/minify#0.2.1"
   },
   "files": [
     "index.js",
